@@ -77,5 +77,46 @@ Python is used for:
 
 The `requests` library is used to send an HTTP GET request to the archived webpage.
 
+📌 Project Workflow
+                ┌─────────────────────┐
+                │  Archived Web Page  │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │  requests.get(URL)  │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │    HTML Response    │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │    BeautifulSoup    │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Find h3.title Tags  │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Extract Movie Text  │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ Reverse Movie List  │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │     movies.txt      │
+                └─────────────────────┘
+
+
 ```python
 response = requests.get(URL)
