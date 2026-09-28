@@ -76,3 +76,6 @@ Python is used for:
 ### Requests
 
 The `requests` library is used to send an HTTP GET request to the archived webpage.
+
+```python
+response = requests.get(URL)
